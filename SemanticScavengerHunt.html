@@ -13,27 +13,39 @@
         </ul>
       </nav>
     </header>
-    <dl>
+    <main>
+      <dl>
+        <dt>
+          <h2><code>&lt;header&gt;</code></h2>
+        </dt>
+        <dr>
+          <ul>
+            <li>The <code>&lt;header&gt;</code> element is not sectioning content and therefore does not introduce a new section in the outline. That said, a <code>&lt;header&gt;</code> element is intended to usually contain the surrounding section's heading (an <code>h1</code>–<code>h6</code> element), but this is <strong>not</strong> required.</li>
+            <li><span><a href="https://www.zwift.com/">Zwift</a></span> uses a <code>&lt;header&gt;</code> for their primary navigation module, which with my very novice understanding appears to be used correctly.</li>
+          </ul>
+        </dr>
+        <dt>
+          <h2><code>&lt;nav&gt;</code></h2>
+        </dt>
+        <dr>
+          <ul>
+            <li>It's not necessary for all links to be contained in a <code>&lt;nav&gt;</code> element. <code>&lt;nav&gt;</code> is intended only for major block of navigation links; typically the <code>&lt;footer&gt;</code> element often has a list of links that don't need to be in a <code>&lt;nav&gt;</code> element.</li>
+            <li>A document may have several <code>&lt;nav&gt;</code> elements, for example, one for site navigation and one for intra-page navigation. aria-labelledby can be used in such case to promote accessibility, see example.</li>
+            <li>User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.</li>
+            <li><span><a href="https://www.zwift.com/">Zwift</a></span> also uses a <code>&lt;nav&gt;</code> for their primary navigation module, which again with my very novice understanding appears to be used correctly.</li>
+          </ul>
+        </dr>
+      </dl>
       <dt>
-        <h2><code>&lt;header&gt;</code></h2>
+        <h2><code>&lt;main&gt;</code></h2>
       </dt>
       <dr>
         <ul>
-          <li>The <code>&lt;header&gt;</code> element is not sectioning content and therefore does not introduce a new section in the outline. That said, a <code>&lt;header&gt;</code> element is intended to usually contain the surrounding section's heading (an <code>h1</code>–<code>h6</code> element), but this is <strong>not</strong> required.</li>
-          <li><span><a href="https://www.zwift.com/">Zwift</a></span> uses a <code>&lt;header&gt;</code> for their primary navigation module, which with my very novice understanding appears to be used correctly.</li>
+          <li>The content of a <code>&lt;main&gt;</code> element should be unique to the document. Content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos, and search forms shouldn't be included unless the search form is the main function of the page </li>
+          <li><main> doesn't contribute to the document's outline; that is, unlike elements such as <code>&lt;body&gt;</code>, headings such as <code>&lt;h2&gt;</code>, and such, <code>&lt;main&gt;</code> doesn't affect the DOM's concept of the structure of the page. It's strictly informative.</li>
+            <li><span><a href="https://www.zwift.com/">Zwift</a></span> also uses a <code>&lt;main&gt;</code>. Feeling redundant at this point, but it looks correct to me.</li>
         </ul>
       </dr>
-      <dt>
-        <h2><code>&lt;nav&gt;</code></h2>
-      </dt>
-      <dr>
-        <ul>
-          <li>It's not necessary for all links to be contained in a <code>&lt;nav&gt;</code> element. <code>&lt;nav&gt;</code> is intended only for major block of navigation links; typically the <code>&lt;footer&gt;</code> element often has a list of links that don't need to be in a <code>&lt;nav&gt;</code> element.</li>
-          <li>A document may have several <code>&lt;nav&gt;</code> elements, for example, one for site navigation and one for intra-page navigation. aria-labelledby can be used in such case to promote accessibility, see example.</li>
-          <li>User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.</li>
-          <li><span><a href="https://www.zwift.com/">Zwift</a></span> uses a <code>&lt;header&gt;</code> for their primary navigation module, which with my very novice understanding appears to be used correctly.</li>
-        </ul>
-      </dr>
-    </dl>
+    </main>
   </body>
 </html>
